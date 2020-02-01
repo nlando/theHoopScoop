@@ -10,36 +10,40 @@
 <body>
   <main id='find-page'>
     <section id='header'>
-      <h1 id='title-the' class='white-box'>The</h1>
-      <h1 id='title-hoop' class='white-box-hoop'>Hoop</h1>
-      <h1 id='title-scoop' class='white-box-scoop'>Scoop</h1>
       <img id="menu-hamburger" class="menu-control" src="icons/hamburger.svg" alt="Hamburger" role="navigation">
-      <button class='find-btn' type='button' name="button">FIND</button>
-      <button class='reviews-btn' type='button' name="button">REVIEWS</button>
-      <button class='add-btn' type='button' name="button">ADD</button>
+      <h1 id='the-text' class='title'>The</h1>
+      <h1 id='hoop-text' class='title'>Hoop</h1>
+      <h1 id='scoop-text' class='title'>Scoop</h1>
+      <h2 id='subtitle'>Find Your Local Hoops</h2>
+      <button id='find-btn' type='button' name="button">FIND</button>
+      <button id='reviews-btn' type='button' name="button">REVIEWS</button>
+      <button id='add-btn' type='button' name="button">ADD</button>
     </section>
     <section id='find-body'>
+      <h2 id='hoop-list-title' class='center-text'>Hoops Closest To You!</h2>
+      <div id='hoop-map'>
+        <!-- ENTER MAP API -->
+      </div>
       <aside id='hoop-list'>
         <ol>
           <li>
-            <ul>
-              <li>{Name of park/location}</li>
-              <li>{Address of park/location}</li>
-              <li># of hoops</li>
+            <ul class='hoop-list-items'>
+              <li class='park-name'>{Name of park/location}</li>
+              <li class='park-address'>{Address of park/location}</li>
+              <li class='number-of-hoops'># of hoops</li>
+              <li class='park-busyness'>{Level of busy-ness}</li>
             </ul>
           </li>
           <li>
-            <ul>
-              <li>{Name of park/location}</li>
-              <li>{Address of park/location}</li>
-              <li># of hoops</li>
+            <ul class='hoop-list-items'>
+              <li class='park-name'>{Name of park/location}</li>
+              <li class='park-address'>{Address of park/location}</li>
+              <li class='number-of-hoops'># of hoops</li>
+              <li class='park-busyness'>{Level of busy-ness}</li>
             </ul>
           </li>
         </ol>
       </aside>
-      <div id='map-portion'>
-        <!-- ENTER MAP API -->
-      </div>
     </section>
   </main>
   <!-- <section id='review-page'>
