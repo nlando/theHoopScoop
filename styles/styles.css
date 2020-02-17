@@ -1,92 +1,573 @@
-body {
-  font-size: 60px;
-}
+@media screen and (min-width: 200px) {
+  body {
+    margin: 0;
+  }
 
-#header {
-  background-image: url("https://i.imgur.com/qISp1Gj.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  position: relative;
-  top: 0;
-}
+  .border {
+    border: 1px solid rgb(65, 62, 61);
+    border-radius: 15px;
+  }
 
-.center-text {
-  text-align: center;
-}
+  .gray-btn {
+    display: block;
+    margin: 20px auto;
+    background-color: rgb(65, 62, 61);
+    color: white;
+    width: 105px;
+    height: 30px;
+    border: 1px solid rgb(65, 62, 61);
+    font-size: 15px;
+  }
 
-.title{
-  color: rgb(31, 28, 12);
-  font-size: 2.5em;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  height: 8vh;
-  padding: 10px 20px;
-  background-color: rgba(255, 255, 255, .65);
-  border-radius: 20px;
-}
+  .orange-btn {
+    display: block;
+    margin: 20px auto;
+    background-color: rgb(246, 99, 53);
+    color: rgb(65, 62, 61);
+    width: 105px;
+    height: 30px;
+    border: 1px solid rgb(65, 62, 61);
+    font-size: 15px;
+  }
 
-#the-text {
-  top: 20%;
-  width: 35vw;
-}
+  #menu-hamburger {
+    position: absolute;
+    top: 15px;
+    left: 8vw;
+    cursor: pointer;
+    width: 10vw;
+    height: 15vh;
+  }
 
-#hoop-text {
-  top: 30%;
-  width: 40vw;
-}
+  #nav-bar {
+    display: none;
+  }
 
-#scoop-text {
-  top: 40%;
-  width: 45vw;
-}
+  #lander-header {
+    background-color: rgb(246, 99, 53);
+    color: rgb(65, 62, 61);
+    height: 81vh;
+    width: 100vw;
+    text-align: center;
+    padding-top: 30%;
+  }
 
-#menu-hamburger {
-  position: absolute;
-  top: -15px;
-  right: 8vw;
-  cursor: pointer;
-  width: 15vw;
-  height: 20vh;
-}
+  #lander-title {
+    text-transform: uppercase;
+    font-size: 50px;
+    width: 60vw;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, .87);
+    border-radius: 8px;
+  }
 
-#subtitle{
-  position: relative;
-  top: 50vh;
-  margin: 0 auto;
-}
+  #basketball-icon {
+    height: 20%;
+    margin: 10%;
+  }
 
-#find-btn, #reviews-btn, #add-btn{
-  display: none;
-}
+  #lander-subtitle {
+    margin: 10% auto;
+    font-size: 25px;
+    width: 60%;
+    background-color: rgba(255, 255, 255, .87);
+    border-radius: 8px;
+  }
 
-@media screen and (min-width:600px) {
-  .title{
-    height: 14vh;
+  #hoop-photo{
+    display:none;
+  }
+
+  #nav-page {
+    height: 60vh;
+    width: 70vw;
+    background-color: rgb(175, 175, 175);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    /* display: none; */
+  }
+
+  #nav-page-title {
+    width: 80%;
+    margin: 15% auto;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  #nav-btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #nav-btns button {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    height: 45px;
+    width: 65%;
+    color: rgb(65, 62, 61);
+    background-color: rgb(246, 99, 53);
+    font-size: 20px;
+  }
+
+  #nav-btns button:hover {
+    cursor: pointer;
+  }
+
+  #find-page {
+    background-color: rgb(175, 175, 175);
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+  }
+
+  #find-page-title {
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    position: relative;
+    top: 8%;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  #hoop-map {
+    height: 50%;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: 15%;
+    background-image: url("../images/bay-area.png");
+    background-size: cover;
+    border-radius: 15px;
+  }
+
+  #find-results {
+    width: 85%;
+    background-color: white;
+    margin: 30% auto;
+  }
+
+  #find-results ul li {
+    list-style: none;
+    margin-left: -30px;
+    font-size: 25px;
+    color: rgb(65, 62, 61);
+  }
+
+  #review-page {
+    background-color: rgb(246, 99, 53);
+    color: rgb(65, 62, 61);
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+  }
+
+  #review-page-title {
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    position: relative;
+    top: 8%;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  #review-header {
+    padding-top: 8vh;
+  }
+
+  #review-search {
+    width: 75%;
+    height: 30px;
+    font-size: 15px;
+    padding: 0px 13px;
+  }
+
+  #search-review-btn:hover {
+    cursor: pointer;
+  }
+
+  #review-park-name {
+    background-color: white;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 30px;
+    font-style: italic;
+  }
+
+  .user-input {
+    width: 80%;
+    background-color: white;
+    margin: 15px auto;
+    padding: 15px 25px;
+  }
+
+  #add-review-btn {
+    margin-top: 10%;
+  }
+
+  #add-review-btn:hover {
+    cursor: pointer;
+  }
+
+  #add-page {
+    background-color: rgb(175, 175, 175);
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    color: rgb(65, 62, 61);
+  }
+
+  #add-page-title {
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    position: relative;
+    top: 8%;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  #footer {
+    height: 25vh;
+    width: 100vw;
+    background-color: rgb(246, 99, 53);
+  }
+
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .icons {
+    height: 30px;
+    width: 30px;
+    margin: 25px 20px 5px;
+  }
+
+  #emailInput input {
+    height: 33px;
+    width: 50%;
+    border: none;
+    border-radius: 1px;
+    margin-left: 10%;
+  }
+
+  #emailInput input::placeholder {
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(65, 62, 61);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  #emailInput button {
+    display: inline;
+    margin-left: 5%;
+  }
+
+  .copyright {
+    font-family: Lato;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(65, 62, 61);
+    margin: 30px 0px 10px;
   }
 }
 
-#hoop-map{
-  height: 40vh;
-  width: 100%;
-  /* border: 2px solid black; */
-  background-image: url("https://i.imgur.com/IEZgitP.png")
+@media screen and (min-width: 600px) {
+  .copyright {
+    font-family: Lato;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(79, 74, 72);
+    padding: 30px 0px 10px;
+  }
 }
 
-#hoop-list{
-  height: 58vh;
-}
+@media screen and (min-width: 900px) {
+  #menu-hamburger {
+    display: none;
+  }
 
-#hoops-list-title{
+  #nav-bar {
+    display: block;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    height: 7vh;
+    width: 100vw;
+    z-index: 100;
+  }
 
-}
+  .border {
+    border: 1px solid rgb(65, 62, 61);
+    border-radius: 15px;
+  }
 
-aside ul li{
-  list-style: none;
-}
+  .gray-btn {
+    display: block;
+    margin: 20px auto;
+    background-color: rgb(65, 62, 61);
+    color: white;
+    width: 105px;
+    height: 30px;
+    border: 1px solid rgb(65, 62, 61);
+    font-size: 15px;
+  }
 
-.hoop-list-items{
-  margin-bottom: 10%;
+  .orange-btn {
+    display: block;
+    margin: 20px auto;
+    background-color: rgb(246, 99, 53);
+    color: rgb(65, 62, 61);
+    width: 105px;
+    height: 30px;
+    border: 1px solid rgb(65, 62, 61);
+    font-size: 15px;
+  }
+
+  #lander-header {
+    height: 41vh;
+  }
+
+  #lander-title {
+    position: relative;
+    top: -80%;
+    right: 18%;
+    width: 40%;
+    z-index: 1;
+  }
+
+  #basketball-icon {
+    display: none;
+  }
+
+  #lander-subtitle {
+    position: relative;
+    top: -80%;
+    right: 10%;
+    width: 20%;
+    z-index: 1;
+  }
+
+  #hoop-photo{
+    display: block;
+    width: 50%;
+    border-radius: 10px;
+    position: absolute;
+    right: 10%;
+    top: 20%;
+  }
+
+  #nav-page {
+    display: none;
+  }
+
+  #nav-items {
+    display: flex;
+    width: 100vw;
+    height: 100%
+  }
+
+  #nav-items ul li:hover {
+    cursor: pointer;
+  }
+
+  #nav-content {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+
+  }
+
+  #nav-contact {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: flex-end;
+  }
+
+  #find-page {
+    background-color: rgb(175, 175, 175);
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+  }
+
+  #find-page-title {
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    position: relative;
+    top: 8%;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  #hoop-map {
+    height: 50%;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    top: 15%;
+    background-image: url("../images/bay-area.png");
+    background-size: cover;
+    border-radius: 15px;
+  }
+
+  #find-results {
+    width: 65%;
+    background-color: white;
+    margin: 10% auto;
+  }
+
+  #find-results ul li {
+    list-style: none;
+    margin-left: -30px;
+    font-size: 25px;
+    color: rgb(65, 62, 61);
+  }
+
+  #review-page {
+    background-color: rgb(246, 99, 53);
+    color: rgb(65, 62, 61);
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+  }
+
+  #review-page-title {
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    position: relative;
+    top: 8%;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  #review-header {
+    padding-top: 8vh;
+  }
+
+  #review-search {
+    width: 40%;
+    height: 30px;
+    font-size: 15px;
+    padding: 0px 13px;
+  }
+
+  #review-search::placeholder{
+    text-align: center;
+  }
+
+  #search-review-btn:hover {
+    cursor: pointer;
+  }
+
+  #review-park-name {
+    background-color: white;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 30px;
+    font-style: italic;
+  }
+
+  .user-input {
+    width: 80%;
+    background-color: white;
+    margin: 15px auto;
+    padding: 15px 25px;
+  }
+
+  #add-review-btn {
+    margin-top: 3%;
+  }
+  #add-review-btn:hover {
+    cursor: pointer;
+  }
+
+  #add-page {
+    background-color: rgb(175, 175, 175);
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    color: rgb(65, 62, 61);
+  }
+
+  #add-page-title {
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(65, 62, 61);
+    font-size: 35px;
+    position: relative;
+    top: 8%;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  #footer {
+    height: 25vh;
+    width: 100vw;
+    background-color: rgb(246, 99, 53);
+  }
+
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .icons {
+    height: 30px;
+    width: 30px;
+    margin: 25px 20px 5px;
+  }
+
+  #emailInput input {
+    height: 33px;
+    width: 50%;
+    border: none;
+    border-radius: 1px;
+    margin-left: 10%;
+  }
+
+  #emailInput input::placeholder {
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(65, 62, 61);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  #emailInput button {
+    display: inline;
+    margin-left: 5%;
+  }
+
+  .copyright {
+    font-family: Lato;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(65, 62, 61);
+    margin: 30px 0px 10px;
+  }
 }

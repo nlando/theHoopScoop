@@ -3,60 +3,77 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Hoop Scoop</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-  <main id='find-page'>
-    <section id='header'>
-      <img id="menu-hamburger" class="menu-control" src="icons/hamburger.svg" alt="Hamburger" role="navigation">
-      <h1 id='the-text' class='title'>The</h1>
-      <h1 id='hoop-text' class='title'>Hoop</h1>
-      <h1 id='scoop-text' class='title'>Scoop</h1>
-      <h2 id='subtitle'>Find Your Local Hoops</h2>
-      <button id='find-btn' type='button' name="button">FIND</button>
-      <button id='reviews-btn' type='button' name="button">REVIEWS</button>
-      <button id='add-btn' type='button' name="button">ADD</button>
-    </section>
-    <section id='find-body'>
-      <h2 id='hoop-list-title' class='center-text'>Hoops Closest To You!</h2>
-      <div id='hoop-map'>
-        <!-- ENTER MAP API -->
+  <main id='lander-page'>
+    <nav id='nav-bar'>
+      <div id='nav-items'>
+        <ul id='nav-content'>
+          <li>Hoops Near You</li>
+          <li>Hoop Reviews</li>
+          <li>Add a Hoop</li>
+        </ul>
+        <ul id='nav-contact'>
+          <li>Contact: nick@thehoopscoop.com</li>
+        </ul>
       </div>
-      <aside id='hoop-list'>
-        <ol>
-          <li>
-            <ul class='hoop-list-items'>
-              <li class='park-name'>{Name of park/location}</li>
-              <li class='park-address'>{Address of park/location}</li>
-              <li class='number-of-hoops'># of hoops</li>
-              <li class='park-busyness'>{Level of busy-ness}</li>
-            </ul>
-          </li>
-          <li>
-            <ul class='hoop-list-items'>
-              <li class='park-name'>{Name of park/location}</li>
-              <li class='park-address'>{Address of park/location}</li>
-              <li class='number-of-hoops'># of hoops</li>
-              <li class='park-busyness'>{Level of busy-ness}</li>
-            </ul>
-          </li>
-        </ol>
-      </aside>
+    </nav>
+    <section id='lander-header'>
+      <img id="menu-hamburger" src="icons/hamburger.svg" alt="Hamburger" role="navigation">
+      <h1 id='lander-title'>The Hoop Scoop</h1>
+      <img id='basketball-icon' src="icons/basketball.png" alt="basketball">
+      <img id='hoop-photo' src="images/hoop-photo.jpg" alt="hoop-photo">
+      <h3 id='lander-subtitle'>Find your local hoops.</h3>
+    </section>
+    <section id='nav-page'>
+      <h2 id='nav-page-title'>Find the local hoop spot.</h2>
+      <div id="nav-btns">
+        <button class='border' id='find-btn' type="button" name="hoops near you">Hoops Near You</button>
+        <button class='border' id='review-btn' type="button" name="hoop reviews">Hoop Reviews</button>
+        <button class='border' id='add-btn' type="button" name="add a hoop">Add a Hoop</button>
+      </div>
     </section>
   </main>
-  <!-- <section id='review-page'>
-    <input id='review-search' type='text' name='review-search' placeholder='Search Hoops Here'>
-    <ul>
-      <li>{Name of park/location}</li>
-      <li>{Address of park/location}</li>
-      <li># of hoops</li>
-    </ul>
+  <section id='find-page'>
+    <h2 id='find-page-title'>Hoops Near You</h2>
+    <div id='hoop-map'>
+      <!-- ENTER MAP API -->
+    </div>
+    <aside class='border' id='find-results'>
+      <ul>
+        <li class='park-name'>(# of stars) name of park</li>
+        <li class='park-address'># of hoops</li>
+        <li class='number-of-hoops'>address</li>
+      </ul>
+    </aside>
+  </section>
+  <section id='review-page'>
+    <div id='review-header'>
+      <h2 id='review-page-title'>Reviews</h2>
+      <h3 id='reviews-subtitle'>See what hoopers are saying.</h3>
+      <input id='review-search' class=' border' type='text' name='review-search' placeholder='Type Name of Park Here...'>
+      <button class='gray-btn border' type="button" name="search review button">Search</button>
+    </div>
+    <div id='review-results'>
+      <h3 id='review-park-name' class='border'>San Pablo Park: 3.8 ⭐️</h3>
+      <section id='user-reviews'>
+        <h4 class='user-input border'>5⭐️- Chain nets - the best sound of splashing! Not a ton of parking, but love biking there anyway</h4>
+        <h4 class='user-input border'>2⭐️- Get there early if you want a spot. Also, one of the four hoops didn't have a net. Bogus.</h4>
+        <h4 class='user-input border'>4⭐️- Pickup game on one of the courts starts at 9am every Saturday. Saw a lot of street parking around, and there's a great park for kids nearby!</h4>
+      </section>
+      <button id='add-review-btn'class='gray-btn border' type="button" name="add-review">Add Review</button>
+    </div>
   </section>
   <section id='add-page'>
-    <form id='add-form'>
-      <input type="text" name="" placeholder='placeholder'>
+    <div id='review-header'>
+      <h2 id='add-page-title'>Add a Hoop</h2>
+      <h3 id='add-subtitle'>Put a hoop on the map.</h3>
+      <form id='add-form'>
+        <!-- <input type="text" name="" placeholder=''>
       <select name='num-of-hoops'>
         <option value=''>Select # of hoops</option>
         <option value='1'>1</option>
@@ -70,15 +87,33 @@
         <option value='9'>9</option>
         <option value='10+'>10+</option>
       </select>
-      <input type="text" name="" placeholder='placeholder'>
-      <input type="text" name="" placeholder='placeholder'>
-      <input type="text" name="" placeholder='placeholder'>
-      <input type="text" name="" placeholder='placeholder'>
-      <input type="text" name="" placeholder='placeholder'>
-    </form>
-    <button type="button" name="final-add-hoop-btn">ADD HOOPS</button>
-  </section> -->
 
+      <input type="text" name="" placeholder='placeholder'>
+      <input type="text" name="" placeholder='placeholder'>
+      <input type="text" name="" placeholder='placeholder'>
+      <input type="text" name="" placeholder='placeholder'>
+      <input type="text" name="" placeholder='placeholder'> -->
+      </form>
+      <button class='orange-btn border' type="button" name="final-add-hoop-btn">Add Hoop</button>
+  </section>
+  <footer>
+    <div id="footer">
+      <div class="socialIcons">
+        <div>
+          <img src="icons/facebook.png" alt="facebook" class="icons">
+          <img src="icons/twitter.png" alt="twitter" class="icons">
+          <img src="icons/instagram.png" alt="instagram" class="icons">
+        </div>
+      </div>
+      <div id='emailInput' class='textCenter'>
+        <input class='border' type="text" placeholder="Email Address">
+        <button class="emailButton gray-btn border">Subscribe</button>
+      </div>
+      <div class="copyright">
+        &copy;2020 Nick Landon
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
