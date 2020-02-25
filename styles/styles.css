@@ -365,7 +365,7 @@
 
   #lander-title {
     position: relative;
-    top: -80%;
+    top: -50%;
     right: 18%;
     width: 40%;
     z-index: 1;
@@ -377,7 +377,7 @@
 
   #lander-subtitle {
     position: relative;
-    top: -80%;
+    top: -50%;
     right: 10%;
     width: 20%;
     z-index: 1;
