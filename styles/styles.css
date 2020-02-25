@@ -317,16 +317,25 @@
     margin-left: 5%;
   }
 
+#email-btn:hover{
+  cursor: pointer;
+}
+
   .copyright {
     font-family: Lato;
     font-weight: 400;
     text-align: center;
     color: rgb(65, 62, 61);
-    margin-top: 15px;
+    margin-top: 10px;
   }
 }
 
 @media screen and (min-width: 600px) {
+
+  #hoop-map {
+    margin-bottom: -10%;
+  }
+
   .copyright {
     font-family: Lato;
     font-weight: 400;
@@ -416,6 +425,7 @@
     width: 60%;
     position: relative;
     top: 15%;
+    margin-bottom: 15%;
   }
 
   #find-results {
