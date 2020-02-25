@@ -9,26 +9,29 @@
 </head>
 
 <body>
+
   <main id='lander-page'>
     <nav id='nav-bar'>
       <div id='nav-items'>
         <ul id='nav-content'>
-          <li>Hoops Near You</li>
-          <li>Hoop Reviews</li>
-          <li>Add a Hoop</li>
+          <li id='find-btn'>Hoops Near You</li>
+          <li id='review-btn'>Hoop Reviews</li>
+          <li id='add-btn'>Add a Hoop</li>
         </ul>
         <ul id='nav-contact'>
           <li>Contact: nick@thehoopscoop.com</li>
         </ul>
       </div>
     </nav>
-    <section id='lander-header'>
+    <section class='page' id='lander-header'>
       <img id="menu-hamburger" src="icons/hamburger.svg" alt="Hamburger" role="navigation">
       <h1 id='lander-title'>The Hoop Scoop</h1>
       <img id='basketball-icon' src="icons/basketball.png" alt="basketball">
       <img id='hoop-photo' src="images/hoop-photo.jpg" alt="hoop-photo">
       <h3 id='lander-subtitle'>Find your local hoops.</h3>
     </section>
+  </main>
+  <aside id='nav-overlay'>
     <section id='nav-page'>
       <h2 id='nav-page-title'>Find the local hoop spot.</h2>
       <div id="nav-btns">
@@ -37,8 +40,8 @@
         <button class='border' id='add-btn' type="button" name="add a hoop">Add a Hoop</button>
       </div>
     </section>
-  </main>
-  <section id='find-page'>
+  </aside>
+  <section class='page' id='find-page'>
     <h2 id='find-page-title'>Hoops Near You</h2>
     <div id='hoop-map'>
       <!-- ENTER MAP API -->
@@ -51,12 +54,12 @@
       </ul>
     </aside>
   </section>
-  <section id='review-page'>
-    <div id='review-header'>
-      <h2 id='review-page-title'>Reviews</h2>
+  <section id='review-page' class='page fade'>
+    <div id='review-header' class='fade'>
+      <h2 id='review-page-title' class='fade'>Reviews</h2>
       <h3 id='reviews-subtitle'>See what hoopers are saying.</h3>
-      <input id='review-search' class=' border' type='text' name='review-search' placeholder='Type Name of Park Here...'>
-      <button class='gray-btn border' type="button" name="search review button">Search</button>
+      <input id='review-search' class='border' type='text' name='review-search' placeholder='Type Name of Park Here...'>
+      <button id='search-review-btn' class='gray-btn border' type="button" name="search review button">Search</button>
     </div>
     <div id='review-results'>
       <h3 id='review-park-name' class='border'>San Pablo Park: 3.8 ⭐️</h3>
@@ -65,16 +68,15 @@
         <h4 class='user-input border'>2⭐️- Get there early if you want a spot. Also, one of the four hoops didn't have a net. Bogus.</h4>
         <h4 class='user-input border'>4⭐️- Pickup game on one of the courts starts at 9am every Saturday. Saw a lot of street parking around, and there's a great park for kids nearby!</h4>
       </section>
-      <button id='add-review-btn'class='gray-btn border' type="button" name="add-review">Add Review</button>
+      <button id='add-review-btn' class='gray-btn border' type="button" name="add-review">Add Review</button>
     </div>
   </section>
-  <section id='add-page'>
+  <section class='page' id='add-page'>
     <div id='review-header'>
       <h2 id='add-page-title'>Add a Hoop</h2>
       <h3 id='add-subtitle'>Put a hoop on the map.</h3>
       <form id='add-form'>
-        <!-- <input type="text" name="" placeholder=''>
-      <select name='num-of-hoops'>
+      <select class='add-hoop-info border' name='num-of-hoops'>
         <option value=''>Select # of hoops</option>
         <option value='1'>1</option>
         <option value='2'>2</option>
@@ -87,17 +89,11 @@
         <option value='9'>9</option>
         <option value='10+'>10+</option>
       </select>
-
-      <input type="text" name="" placeholder='placeholder'>
-      <input type="text" name="" placeholder='placeholder'>
-      <input type="text" name="" placeholder='placeholder'>
-      <input type="text" name="" placeholder='placeholder'>
-      <input type="text" name="" placeholder='placeholder'> -->
       </form>
-      <button class='orange-btn border' type="button" name="final-add-hoop-btn">Add Hoop</button>
+      <button id='final-add-hoop-btn' class='orange-btn border' type="button" name="final-add-hoop-btn">Add Hoop</button>
   </section>
   <footer>
-    <div id="footer">
+    <div class='page' id="footer">
       <div class="socialIcons">
         <div>
           <img src="icons/facebook.png" alt="facebook" class="icons">
@@ -114,6 +110,9 @@
       </div>
     </div>
   </footer>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+  <script src='script/app.js' type="text/javascript"></script>
 </body>
 
 </html>

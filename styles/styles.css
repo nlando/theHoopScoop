@@ -1,6 +1,12 @@
 @media screen and (min-width: 200px) {
-  body {
+  html, body {
     margin: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  .page{
+    scroll-snap-align:start;
   }
 
   .border {
@@ -46,7 +52,7 @@
   #lander-header {
     background-color: rgb(246, 99, 53);
     color: rgb(65, 62, 61);
-    height: 81vh;
+    height: 82vh;
     width: 100vw;
     text-align: center;
     padding-top: 30%;
@@ -67,31 +73,48 @@
   }
 
   #lander-subtitle {
-    margin: 10% auto;
+    margin: 5% auto;
     font-size: 25px;
     width: 60%;
     background-color: rgba(255, 255, 255, .87);
     border-radius: 8px;
   }
 
-  #hoop-photo{
-    display:none;
+  #hoop-photo {
+    display: none;
+  }
+
+  #nav-overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(74, 74, 79, .7);
+    display: none;
   }
 
   #nav-page {
     height: 60vh;
     width: 70vw;
+    margin-top: 10%;
     background-color: rgb(175, 175, 175);
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
-    /* display: none; */
+    border-radius: 14px;
+    display: none;
   }
 
   #nav-page-title {
     width: 80%;
     margin: 15% auto;
+    padding-top: 12%;
     color: rgb(65, 62, 61);
     font-size: 35px;
     font-style: italic;
@@ -118,7 +141,7 @@
   }
 
   #find-page {
-    background-color: rgb(175, 175, 175);
+    background-color: rgba(230, 230, 230, .87);
     height: 100vh;
     width: 100vw;
     text-align: center;
@@ -220,7 +243,7 @@
   }
 
   #add-page {
-    background-color: rgb(175, 175, 175);
+    background-color: rgba(230, 230, 230, .87);
     height: 100vh;
     width: 100vw;
     text-align: center;
@@ -230,6 +253,7 @@
   #add-page-title {
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 5%;
     color: rgb(65, 62, 61);
     font-size: 35px;
     position: relative;
@@ -237,6 +261,22 @@
     text-align: center;
     font-style: italic;
     text-decoration: underline;
+  }
+
+  #add-page-subtitle {
+    padding-bottom: 16%;
+  }
+
+  .add-hoop-info {
+    width: 75%;
+    height: 50px;
+    font-size: 15px;
+    padding: 0px 13px;
+    margin-top: 7px;
+  }
+
+  #final-add-hoop-btn:hover {
+    cursor: pointer;
   }
 
   #footer {
@@ -282,7 +322,7 @@
     font-weight: 400;
     text-align: center;
     color: rgb(65, 62, 61);
-    margin: 30px 0px 10px;
+    margin-top: 15px;
   }
 }
 
@@ -292,7 +332,6 @@
     font-weight: 400;
     text-align: center;
     color: rgb(79, 74, 72);
-    padding: 30px 0px 10px;
   }
 }
 
@@ -311,35 +350,8 @@
     z-index: 100;
   }
 
-  .border {
-    border: 1px solid rgb(65, 62, 61);
-    border-radius: 15px;
-  }
-
-  .gray-btn {
-    display: block;
-    margin: 20px auto;
-    background-color: rgb(65, 62, 61);
-    color: white;
-    width: 105px;
-    height: 30px;
-    border: 1px solid rgb(65, 62, 61);
-    font-size: 15px;
-  }
-
-  .orange-btn {
-    display: block;
-    margin: 20px auto;
-    background-color: rgb(246, 99, 53);
-    color: rgb(65, 62, 61);
-    width: 105px;
-    height: 30px;
-    border: 1px solid rgb(65, 62, 61);
-    font-size: 15px;
-  }
-
   #lander-header {
-    height: 41vh;
+    height: 49vh;
   }
 
   #lander-title {
@@ -362,7 +374,7 @@
     z-index: 1;
   }
 
-  #hoop-photo{
+  #hoop-photo {
     display: block;
     width: 50%;
     border-radius: 10px;
@@ -390,7 +402,6 @@
     list-style: none;
     width: 40%;
     justify-content: space-between;
-
   }
 
   #nav-contact {
@@ -400,34 +411,11 @@
     justify-content: flex-end;
   }
 
-  #find-page {
-    background-color: rgb(175, 175, 175);
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
-  }
-
-  #find-page-title {
-    width: 80%;
-    margin: 0 auto;
-    color: rgb(65, 62, 61);
-    font-size: 35px;
-    position: relative;
-    top: 8%;
-    text-align: center;
-    font-style: italic;
-    text-decoration: underline;
-  }
-
   #hoop-map {
     height: 50%;
     width: 60%;
-    margin: 0 auto;
     position: relative;
     top: 15%;
-    background-image: url("../images/bay-area.png");
-    background-size: cover;
-    border-radius: 15px;
   }
 
   #find-results {
@@ -443,74 +431,28 @@
     color: rgb(65, 62, 61);
   }
 
-  #review-page {
-    background-color: rgb(246, 99, 53);
-    color: rgb(65, 62, 61);
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
-  }
-
-  #review-page-title {
-    width: 80%;
-    margin: 0 auto;
-    color: rgb(65, 62, 61);
-    font-size: 35px;
-    position: relative;
-    top: 8%;
-    text-align: center;
-    font-style: italic;
-    text-decoration: underline;
-  }
-
-  #review-header {
-    padding-top: 8vh;
-  }
-
   #review-search {
     width: 40%;
-    height: 30px;
-    font-size: 15px;
-    padding: 0px 13px;
+    height: 40px;
   }
 
-  #review-search::placeholder{
+  #review-search::placeholder {
     text-align: center;
-  }
-
-  #search-review-btn:hover {
-    cursor: pointer;
-  }
-
-  #review-park-name {
-    background-color: white;
-    width: 70%;
-    margin: 0 auto;
-    padding: 10px;
-    font-size: 30px;
-    font-style: italic;
   }
 
   .user-input {
     width: 80%;
     background-color: white;
     margin: 15px auto;
-    padding: 15px 25px;
+    padding: 10px 25px;
   }
 
   #add-review-btn {
-    margin-top: 3%;
-  }
-  #add-review-btn:hover {
-    cursor: pointer;
+    margin-top: 8%;
   }
 
-  #add-page {
-    background-color: rgb(175, 175, 175);
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
-    color: rgb(65, 62, 61);
+  #add-review-btn:hover {
+    cursor: pointer;
   }
 
   #add-page-title {
@@ -568,6 +510,6 @@
     font-weight: 400;
     text-align: center;
     color: rgb(65, 62, 61);
-    margin: 30px 0px 10px;
+    margin-top: 15px;
   }
 }
